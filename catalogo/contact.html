@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>AutoShop - Contacto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+
+    <!-- Leaflet Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f7fa;
+        }
+
+        /* --- Navbar superior --- */
+        .navbar.bg-dark {
+            background: linear-gradient(90deg, #111, #222, #111);
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        .navbar.bg-dark a {
+            color: #ccc;
+            transition: color 0.3s ease;
+        }
+
+        .navbar.bg-dark a:hover {
+            color: #00d084 !important;
+        }
+
+        /* --- Navbar principal --- */
+        .navbar.shadow {
+            background: linear-gradient(90deg, #ffffff, #f8f9fa);
+            border-bottom: 3px solid #00b37a;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: #00b37a !important;
+            letter-spacing: 1px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #333 !important;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: #00b37a !important;
+        }
+
+        /* --- Mapa --- */
+        #mapid {
+            width: 100%;
+            height: 400px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        /* --- Formulario --- */
+        form label {
+            font-weight: 500;
+            color: #333;
+        }
+
+        form .form-control {
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            box-shadow: none;
+        }
+
+        form .btn-success {
+            background-color: #00b37a;
+            border: none;
+        }
+
+        form .btn-success:hover {
+            background-color: #00d084;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: linear-gradient(90deg, #111, #1c1c1c);
+            color: #ccc;
+        }
+
+        footer a:hover {
+            color: #00b37a !important;
+        }
+    </style>
+</head>
+
+<body>
+
+   
+
+    <!-- Navbar principal -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <!-- Logo -->
+            <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+                AutoShop
+            </a>
+
+            <!-- Botón responsive -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menú principal -->
+            <div class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between" id="main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-center mx-lg-auto gap-3">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="shop.html">Catálogo</a></li>
+                        <li class="nav-item"><a class="nav-link active position-relative" href="contact.html">
+                            Contacto
+                            <span class="nav-underline position-absolute start-0 bottom-0 w-100 bg-success" style="height: 3px;"></span>
+                        </a></li>
+                    </ul>
+                </div>
+
+                <!-- Iconos -->
+                
+            </div>
+        </div>
+    </nav>
+
+    <!-- Título -->
+    <section class="container py-5 text-center">
+        <h2 class="fw-bold mb-3 text-success">Contáctanos</h2>
+        <p class="text-muted">Estamos aquí para ayudarte. Escríbenos o visítanos en nuestras oficinas.</p>
+    </section>
+
+    <!-- Mapa -->
+    <div class="container">
+        <div id="mapid"></div>
+    </div>
+
+    <!-- Formulario -->
+    <div class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <form method="post">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label>Nombre</label>
+                            <input type="text" class="form-control" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label>Correo Electrónico</label>
+                            <input type="email" class="form-control" placeholder="tu@email.com" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label>Asunto</label>
+                        <input type="text" class="form-control" placeholder="Motivo del mensaje">
+                    </div>
+                    <div class="mb-3">
+                        <label>Mensaje</label>
+                        <textarea class="form-control" rows="6" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    </div>
+                    <div class="text-end">
+                        <button type="submit" class="btn btn-success btn-lg px-4">Enviar mensaje</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-5 mt-5">
+        <div class="container text-light">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="h2 text-success border-bottom pb-3 border-light logo">AutoShop</h2>
+                    <p>123 Consectetur at ligula 10660</p>
+                    <p>Tel: 010-020-0340</p>
+                    <p>Email: info@autoshop.com</p>
+                </div>
+                <div class="col-md-4">
+                    <h2 class="h2 border-bottom pb-3 border-light">Categorías</h2>
+                    <ul class="list-unstyled">
+                        <li>SUV</li>
+                        <li>Deportivo</li>
+                        <li>Sedán</li>
+                        <li>Híbrido</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h2 class="h2 border-bottom pb-3 border-light">Más Información</h2>
+                    <ul class="list-unstyled">
+                        <li><a class="text-decoration-none text-light" href="index.html">Inicio</a></li>
+                        <li><a class="text-decoration-none text-light" href="shop.php">Catálogo</a></li>
+                        <li><a class="text-decoration-none text-light" href="contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('mapid').setView([-17.7833, -63.1821], 13); // Santa Cruz, Bolivia
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        L.marker([-17.7833, -63.1821]).addTo(map)
+            .bindPopup("<b>AutoShop</b><br>Tu concesionario de confianza.")
+            .openPopup();
+
+    </script>
+</body>
+</html>
